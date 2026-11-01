@@ -34,3 +34,17 @@
 - For Python changes, compile both scripts. For Scatter changes, also run `python3 projects/scatter/scatter.py`. Record host UI/geometry checks separately from standalone checks.
 - For path or layout changes, inspect references in build scripts, `compile_flags.txt`, Python output locations, and READMEs; verify that original source and reference files remain accounted for.
 - Before committing, inspect the staged diff and ignored-file exclusions. Report checks actually run and any host validation still pending. Never describe a build-only result as a successful form·Z runtime test.
+
+## Agent skills
+
+### Issue tracker
+
+Specs and tickets use GitHub Issues in `jedt3d/formz-extensions`. Read `docs/agents/issue-tracker.md` before tracker operations.
+
+### Triage labels
+
+Use the five default Matt Pocock triage roles. Read `docs/agents/triage-labels.md` before applying or interpreting them.
+
+### Domain docs
+
+Use the single-context domain-doc layout. Read `docs/agents/domain.md` when exploring domain terminology or architectural decisions.

@@ -84,6 +84,12 @@ The Python API probe's [historical snapshot](projects/python-api-dump/reference/
 
 ## Development workflow
 
+Design research: [Cinema 4D and Blender array workflows, with form·Z extension opportunities](docs/research/array-tools.md).
+
+Array development: [Feature proposal](docs/proposals/array-tools.md) and [incremental development plan](docs/plans/array-tools-incremental.md). Complete LINE with shared picking, copy/clone, randomization, and lifecycle behavior before adding other layouts. Each gate adds one behavior and becomes the next baseline only after its focused test passes.
+
+Execution artifacts: [Array spec](docs/specs/array-tools.md) and [published ticket index](docs/tickets/array-tools/README.md). The [GitHub parent spec](https://github.com/jedt3d/formz-extensions/issues/2) contains 33 child tickets with native dependency links.
+
 This organization establishes the baseline on `main`. Subsequent development uses one `feature/<plan-name>` branch per development plan. For example, with a clean working tree:
 
 ```sh
