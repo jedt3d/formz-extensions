@@ -1,0 +1,46 @@
+id,name,group,batch
+3169,Pick,Tool palette,pilot
+3033,V-Line,Draw,pilot (traced)
+3025,Rectangle,Shapes,pilot (traced)
+3142,Polygon,Shapes,pilot (traced)
+3038,Circle 1,Shapes,pilot (traced)
+3280,Cube,Primitives,pilot (traced)
+3422,Extrusion,Derive,pilot (traced)
+3023,Revolve,Derive 2,pilot (traced)
+3480,Fillet,Modify,pilot (traced)
+7235,Paint,Attributes,pilot (traced)
+3152,3P Rect,Shapes,1
+3039,Circle 2,Shapes,1
+3040,Circle 3,Shapes,1
+3041,Ellipse 1,Shapes,1
+3042,Ellipse 2,Shapes,1
+3269,Line,Draw,1
+3376,Bz Spline,Draw,1
+3258,Pt Spline,Draw,1
+3257,Spline,Draw,1
+3034,Stream,Draw,1
+3037,Arc 1,Draw,1
+3036,Arc 2,Draw,1
+3035,Arc 3,Draw,1
+3131,Arc 4,Draw,1
+3245,Arc 5,Draw,1
+3174,Arc (negative 3-point),Draw,1
+3481,Pnt Cloud,Derive,2
+3420,Derv Segt,Derive,2
+3502,Derv Face,Derive,2
+3421,2D Wall,Derive,2
+3423,Pnt Extr,Derive,2
+3424,3D Wall,Derive,2
+3137,Project,Derive,2
+3369,S-Helix,Derive 2,2
+3777,W-Helix,Derive 2,2
+3464,Pipe,Derive 2,2
+3024,Axl,Derive 2,2
+3774,2S Sweep,Derive 2,2
+3775,2P Sweep,Derive 2,2
+3776,Bnd,Derive 2,2
+3683,D Sweep,Derive 2,2
+3493,Ofst Surf,Derive 2,2
+3792,Thicken,Derive 2,2
+3249,Skin,Derive 2,2
+3457,X-Skin,Derive 2,2
