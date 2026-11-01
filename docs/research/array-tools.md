@@ -194,19 +194,11 @@ Material-property variation remains a future feature. The duplication and parame
 
 ### Recommended first development plan
 
-Before implementing the complete seven-mode command, validate host operations and the definitions of count, pitch, clear gap, randomization, source links, and vertex selection. A small path-placement prototype can test the available APIs, but basic path placement itself already exists in form·Z and is not the product's differentiator. The intended value is consistent controls and randomized intervals/transforms across the layouts, including polygon-edge policies and one repetition per target vertex. Material controls and material variation are deferred.
+The current [proposal](../proposals/array-tools.md#first-usable-milestone-line-with-shared-features) and [development plan](../plans/array-tools-incremental.md) require a complete **LINE_READY** baseline before additional patterns. The earlier path-first feasibility suggestion is superseded by the user's LINE-first sequencing decision.
 
-The first prototype should demonstrate these outcomes in form·Z:
+Prove the shared behavior through LINE in small steps: source pre/post picking, native copy and transforms, count/pitch/length entry, geometry preservation, copy/verified linked output, each randomization channel, visible Tool Options, preview, Apply, cancellation, Undo/Redo, and committed-output save/reopen. Every step has one focused acceptance test and inherits the previous accepted commit.
 
-1. Select a source and a supported path, extract the curve, and obtain both distance-based positions and tangents.
-2. Place rigid repetitions with explicit count/pitch semantics. Test an open line, open curved path, and closed circle; a closed loop must not create a second copy at the seam.
-3. Control source origin and orientation without accumulating scale or transform errors. Include a non-world-aligned path.
-4. Verify one-operation Undo/Redo and cancellation cleanup using the appropriate host operation APIs. A tool's during-click Undo callback alone does not establish whole-operation Undo behavior.
-5. Exercise symbol/component instancing separately from ordinary copies before promising memory savings or linked editing. Preserve source object/face material assignments without creating materials; material features are deferred.
-6. If saved editability is part of the chosen product, change count/pitch after saving and reopening, then verify source/path changes and copy/paste. Declare the result baked if persistence has not been established.
-7. Validate target vertex enumeration and one repetition per vertex, including shared mesh vertices, distinct coincident vertices, and optional seeded transform variation.
-8. Exercise source-only pre-picking, post-picking from an empty selection, mixed pre/post picking, ambiguous full preselection, target-only vertex preselection, layout switching, and cancellation. Verify role assignment, preserved originals, repeatable preview, and one-operation Undo/Redo.
-9. Exercise facetted, NURBS, smooth-solid, and parametric sources and supported curved targets. Verify native representation and controls, including rejection or explicit handling of unsupported nonuniform/mirrored transforms. Keep topological vertices, control points, and sampled points distinct.
+Only after LINE_READY passes, add Rectangle, 3D Grid, Radial, Path, Polygon Edges, and Vertices. Target-role picking, curve orientation, angular intervals, vertex scope, and layout switching join the plan when a layout actually needs them. Reuse and rerun applicable shared behavior for each added pattern. Material features remain deferred, and saved editable definitions remain a proposed follow-on.
 
 ### Decisions to make before a production implementation
 

@@ -14,8 +14,18 @@ form·Z already has Rectangular Array, Radial Array, and Place Along Path. The n
 
 ## Feature list
 
+Fxx labels are stable feature identifiers, not development priorities. Shared workflow features are listed first below. The [development plan](../plans/array-tools-incremental.md) defines execution order with sequential Gxxx gates, beginning with source pre-picking and post-picking immediately after registration.
+
 | ID | Feature | Required behavior |
 | --- | --- | --- |
+| F14 | Shared Tool Options | One Array tool, seven layout modes, layout-specific placement controls, and shared randomization controls. |
+| F11 | Pre-picking | Accept source preselection, target-only preselection, and unambiguous mixed-role selections. |
+| F12 | Post-picking | Collect Sources and Targets separately; target picking preserves source selection. |
+| F10 | Copy / linked output | Offer independent copies and verified native linked repetition behavior; distinguish legacy clones and components during feasibility tests. |
+| F13 | Native geometry | Target facetted, NURBS, smooth-solid, and controlled/parametric sources without silently converting geometry or dropping controls. |
+| F15 | Operation lifecycle | Repeatable preview, cancellation cleanup, and one-operation Undo/Redo. |
+| F08 | Placement semantics | Distinguish count, pitch, clear gap, and fit-to-extent; use explicit units and percentage references. |
+| F09 | Randomization | Independently vary interval/gap, size, rotation, and position using numeric ranges or percentages with defined reference values; provide a repeatable seed. |
 | F01 | Line | Place by count, numeric interval, or overall length; support graphic and numeric layout definition. |
 | F02 | Rectangle | Two-dimensional grid with independent counts, spacing, and dimensions along two axes. |
 | F03 | Cube / 3D grid | Three-dimensional grid with independent counts, spacing, and dimensions; unequal side lengths are allowed. |
@@ -23,17 +33,24 @@ form·Z already has Rectangular Array, Radial Array, and Place Along Path. The n
 | F05 | Path | Lines/polylines and supported curved/NURBS paths; count or arc-length interval, endpoint margins, and orientation/roll. |
 | F06 | Polygon edges | Selected edges or shape boundary; whole-perimeter or per-edge placement, with explicit corner and shared-vertex handling. |
 | F07 | Vertices | Exactly one repetition per target topological vertex, with optional randomized transforms. |
-| F08 | Placement semantics | Distinguish count, pitch, clear gap, and fit-to-extent; use explicit units and percentage references. |
-| F09 | Randomization | Independently vary interval/gap, size, rotation, and position using numeric ranges or percentages with defined reference values; provide a repeatable seed. |
-| F10 | Copy / linked output | Offer independent copies and verified native linked repetition behavior; distinguish legacy clones and components during feasibility tests. |
-| F11 | Pre-picking | Accept source preselection, target-only preselection, and unambiguous mixed-role selections. |
-| F12 | Post-picking | Collect Sources and Targets separately; target picking preserves source selection. |
-| F13 | Native geometry | Target facetted, NURBS, smooth-solid, and controlled/parametric sources without silently converting geometry or dropping controls. |
-| F14 | Shared Tool Options | One Array tool, seven layout modes, layout-specific placement controls, and shared randomization controls. |
-| F15 | Operation lifecycle | Repeatable preview, cancellation cleanup, and one-operation Undo/Redo. |
 | F16 | Saved editability | Recommended follow-on capability: save an array definition, reopen it, and regenerate its owned output. Feasibility and host integration remain unverified. |
 
 All features above are planned, not tested capabilities. F01–F15 describe the proposed core release based on the discussion. F16 is a proposed follow-on beyond that release.
+
+## First usable milestone: LINE with shared features
+
+Build and test the shared behavior through one complete LINE workflow before adding Rectangle or another layout:
+
+1. Register the LINE-capable tool, then establish source pre-picking and post-picking.
+2. Produce ordinary LINE copies with count/interval/length, source anchors, graphic/numeric input, and source selection editing.
+3. Prove native source preservation and the independent-copy versus verified linked-output choice through LINE.
+4. Add each shared randomization parameter separately, including seed stability and numeric/percentage inputs, through LINE Tool Options.
+5. Complete LINE preview replacement, Apply, cancellation, Undo/Redo, and saved committed output.
+6. Run the accumulated visible-tool fixtures and record the accepted commit as **LINE_READY**.
+
+Rectangle development starts only after LINE_READY passes. Later patterns reuse these verified services and add their own placement generator, applicable controls, and focused regression fixtures. Do not build every layout's deterministic placements first and integrate randomization or lifecycle at the end.
+
+Some behavior needs a second layout: Path introduces target-object role picking and curve orientation; Vertices adds vertex-target scope; Radial adds angular intervals; Rectangle permits the first layout-switch test. These additions remain separate gates in their layout phases. This does not postpone ordinary source pre/post picking or other shared LINE behavior.
 
 ## Proposed interface
 
@@ -110,6 +127,8 @@ Also outside this proposal's core release: surface/volume scatter, deformation a
 ## Delivery and success criteria
 
 Use the [incremental plan](../plans/array-tools-incremental.md): one new behavior and one focused acceptance test per gate. A gate is accepted only with a known-good commit, actual evidence, and passing prior regression checks. Documentation, compilation, and runtime passes are recorded separately.
+
+LINE_READY is the first usable shared-feature baseline. The other six layouts extend it incrementally; each reruns the applicable shared workflow tests before becoming a baseline for the next pattern.
 
 The first complete release is one committed-copy/verified-linked-output Array tool covering F01–F15, with all seven layouts, randomization, both picking workflows, and a tested geometry support matrix. Saved editable definitions (F16) follow their own gates. If a required capability fails, report the specific limitation and revise the proposal; do not quietly narrow the feature list or claim an untested type works.
 
