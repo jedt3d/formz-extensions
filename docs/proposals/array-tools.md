@@ -14,25 +14,25 @@ form·Z already has Rectangular Array, Radial Array, and Place Along Path. The n
 
 ## Feature list
 
-Fxx labels are stable feature identifiers, not development priorities. Shared workflow features are listed first below. The [development plan](../plans/array-tools-incremental.md) defines execution order with sequential Gxxx gates, beginning with source pre-picking and post-picking immediately after registration.
+F01 onward now follows the order in which features are completed. Finish a feature's focused gates before starting the next feature. Earlier unexecuted feature IDs have been replaced; F01–F16 cover the current scope, and the sequence can grow as features are added. The [development plan](../plans/array-tools-incremental.md#feature-to-gate-delivery-map) maps each feature to its sequential tests.
 
 | ID | Feature | Required behavior |
 | --- | --- | --- |
-| F14 | Shared Tool Options | One Array tool, seven layout modes, layout-specific placement controls, and shared randomization controls. |
-| F11 | Pre-picking | Accept source preselection, target-only preselection, and unambiguous mixed-role selections. |
-| F12 | Post-picking | Collect Sources and Targets separately; target picking preserves source selection. |
-| F10 | Copy / linked output | Offer independent copies and verified native linked repetition behavior; distinguish legacy clones and components during feasibility tests. |
-| F13 | Native geometry | Target facetted, NURBS, smooth-solid, and controlled/parametric sources without silently converting geometry or dropping controls. |
-| F15 | Operation lifecycle | Repeatable preview, cancellation cleanup, and one-operation Undo/Redo. |
-| F08 | Placement semantics | Distinguish count, pitch, clear gap, and fit-to-extent; use explicit units and percentage references. |
-| F09 | Randomization | Independently vary interval/gap, size, rotation, and position using numeric ranges or percentages with defined reference values; provide a repeatable seed. |
-| F01 | Line | Place by count, numeric interval, or overall length; support graphic and numeric layout definition. |
-| F02 | Rectangle | Two-dimensional grid with independent counts, spacing, and dimensions along two axes. |
-| F03 | Cube / 3D grid | Three-dimensional grid with independent counts, spacing, and dimensions; unequal side lengths are allowed. |
-| F04 | Radial | Center, axis/plane, radius, full circle or arc, count or angular interval, and orientation choice. |
-| F05 | Path | Lines/polylines and supported curved/NURBS paths; count or arc-length interval, endpoint margins, and orientation/roll. |
-| F06 | Polygon edges | Selected edges or shape boundary; whole-perimeter or per-edge placement, with explicit corner and shared-vertex handling. |
-| F07 | Vertices | Exactly one repetition per target topological vertex, with optional randomized transforms. |
+| F01 | Tool shell and required-input state | Register one Array tool with an initial LINE interface; Apply remains unavailable with incomplete input. |
+| F02 | Source pre-picking | Adopt valid source preselection without a redundant selection step. |
+| F03 | Source post-picking | Select sources after activation, complete that pick set, or cancel it. |
+| F04 | One native copy and basic operation lifecycle | Create and position one copy, then prove Undo, Redo, and unfinished-operation cancellation. |
+| F05 | Deterministic LINE and placement controls | Count, pitch, clear gap, interval/overall length, graphic/numeric entry, source anchors, and assembly behavior. |
+| F06 | Native source compatibility | Test straight/curved NURBS sources, NURBS surfaces/objects and NURBS-faced solids, smooth solids, and controlled solids separately; preserve their native representations and supported controls. |
+| F07 | Copy versus linked output | Prove independent copies and the chosen native linked mechanism through LINE; distinguish legacy clones and components during feasibility tests. |
+| F08 | Shared randomization on LINE | Add interval/gap, size, rotation, and position variation one channel at a time, with numeric/percentage references and a reproducible seed. |
+| F09 | Complete LINE preview and output lifecycle | Finish preview, Apply, cancellation, multi-element Undo/Redo, and committed-output reopening; preserve existing material assignments. Accept LINE_READY here. |
+| F10 | Rectangle and first layout switching | Add a two-axis grid and its extents, then prove shared-setting retention across the first two layouts. |
+| F11 | Cube / 3D Grid | Extend the accepted grid to three axes with independent counts/spacing/extents and unequal side lengths. |
+| F12 | Radial | Add center, axis/plane, radius, circle/arc, count/angular interval, radial orientation, and angular interval variation. |
+| F13 | Path and target-role picking | Add separate Sources/Targets picking, then test straight edges, straight NURBS paths, curved NURBS paths, arcs, and native curve/spline objects; prove arc-length placement and orientation. |
+| F14 | Polygon Edges and native object boundaries | Add whole-perimeter/per-edge policies and corner rules; separately test polygon edges, straight/curved NURBS boundaries, and straight/curved solid edges. |
+| F15 | Vertices | Add vertex-target selection and scope, one repetition per topological vertex, and the applicable shared random transforms. |
 | F16 | Saved editability | Recommended follow-on capability: save an array definition, reopen it, and regenerate its owned output. Feasibility and host integration remain unverified. |
 
 All features above are planned, not tested capabilities. F01–F15 describe the proposed core release based on the discussion. F16 is a proposed follow-on beyond that release.
@@ -49,6 +49,8 @@ Build and test the shared behavior through one complete LINE workflow before add
 6. Run the accumulated visible-tool fixtures and record the accepted commit as **LINE_READY**.
 
 Rectangle development starts only after LINE_READY passes. Later patterns reuse these verified services and add their own placement generator, applicable controls, and focused regression fixtures. Do not build every layout's deterministic placements first and integrate randomization or lifecycle at the end.
+
+F01–F09 complete that first-pattern baseline. F10–F15 add the remaining layouts in order. F16 is the proposed saved-editability follow-on.
 
 Some behavior needs a second layout: Path introduces target-object role picking and curve orientation; Vertices adds vertex-target scope; Radial adds angular intervals; Rectangle permits the first layout-switch test. These additions remain separate gates in their layout phases. This does not postpone ordinary source pre/post picking or other shared LINE behavior.
 
@@ -117,6 +119,12 @@ Source and target support are separate compatibility questions:
 - Check the parameter-retention restriction for nonuniform scaling documented in `sdk/FZ_SDK_923/src/h/fz_otyp_api.h:102`.
 
 Implement placement computation separately from scene creation only as far as needed for meaningful tests. Unit tests can verify coordinates, counts, bounds, and seeded values; host tests must verify registration, picking, geometry representation, linked editing, Undo, and saved behavior. Existing SDK declarations are evidence of possible implementation paths, not runtime proof. See the [research evidence](../research/array-tools.md#evidence-in-this-repository-and-local-sdk).
+
+### Selectable geometry test cases
+
+Every applicable test must identify **Source fixture** and **Guide/target fixture** independently. A NURBS object can be the thing copied along a straight LINE; a solid object can be copied along a NURBS curve. These test different capabilities. The [plan's fixture catalog](../plans/array-tools-incremental.md#selectable-source-and-guidetarget-fixtures) makes those choices explicit, with separate acceptance evidence for each case.
+
+A selected straight polygon edge, a geometrically straight NURBS curve, and a curved NURBS/native curve are separate guide cases. A whole solid or NURBS surface is a source/target owner, not automatically a path: designate its actual boundary edge for edge placement. A pass on a facetted line or object does not pass any NURBS or solid case. Keep unimplemented cases unavailable with an explanation instead of silently converting them to facets.
 
 ## Material scope and exclusions
 
