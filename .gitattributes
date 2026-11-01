@@ -1,0 +1,2 @@
+# Preserve the original mixed/CRLF line endings in SDK-derived source and resources.
+projects/smiley/src/** -text

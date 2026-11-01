@@ -1,0 +1,3 @@
+-Isdk/FZ_SDK_923/src/h
+-Iprojects/smiley/src/h
+-std=gnu99

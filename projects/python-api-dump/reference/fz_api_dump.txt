@@ -1,0 +1,321 @@
+python 3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]
+
+=== module fz  (module)
+  arc                          Creates a arc.
+  blend                        Creates a blended obect object from  2 source objects.
+  circle                       Creates a circle.
+  closeProject                 Gets the project id'd by the tag.
+  cone                         Creates a cone primitive.
+  converge                     Creates an converged object from a source object.
+  createCameraView             Gets the view id'd by the tag.
+  createGroup                  Gets the group id'd by the tag.
+  createLayer                  Gets the layer id'd by the tag.
+  createLightAmbient           Creates an Ambient light
+  createLightCone              Creates a Cone light
+  createLightDistant           Creates a Distant light
+  createLightPoint             Creates a Point light
+  createMaterial               Gets the material id'd by the tag.
+  createObject                 Creates a new empty object.
+  createSubd                   creates a subd object
+  createWindowView             Gets the view id'd by the tag.
+  cross                        Caculates the cross product of two vectors.
+  cube                         Creates a cube primitive.
+  cubicBezier                  Creates a cubic beziers.
+  cylinder                     Creates a cylinder primitive.
+  delete                       Creates a Hyperbolic Paraboloid primitive.
+  deleteGroup                  Gets the group id'd by the tag.
+  deleteLayer                  Gets the layer id'd by the tag.
+  deleteLayerGroup             Deletes the layer's group'.
+  deleteLight                  Gets the light id'd by the tag.
+  deleteMaterial               Gets the material id'd by the tag.
+  deleteView                   Gets the view id'd by the tag.
+  deriveObjectFromPart         Creates a new object from a face of an existing object.
+  deriveObjectFromPartList     Creates a new object from a face of an existing object.
+  difference                   Difference a set of objects (a - b)
+  distance                     Caculates the distance between two points.
+  divideSubdObject             divides a subd object
+  dot                          Caculates the dot product of two vectors.
+  doubleHyperboloid            Creates a Double hyperboloid primitive.
+  dsweepAngle                  Creates an draft sweep object by angle.
+  dsweepCustom                 Creates an draft sweep object by function.
+  dsweepDist                   Creates an draft sweep object by distance.
+  dsweepPredef                 Creates an draft sweep object by distance.
+  dsweepWire                   Creates an draft sweep object.
+  duplicateLayer               Gets the layer id'd by the tag.
+  duplicateLight               Gets the light id'd by the tag.
+  duplicateMaterial            Gets the material id'd by the tag.
+  duplicateView                Gets the view id'd by the tag.
+  edge_ptr                     formZ Object edge
+  ellipse                      Creates a ellipse.
+  export                       Gets the project name
+  extrude                      Creates an extruded object from a source object.
+  face_ptr                     formZ Object face
+  findLayer                    Gets the layer id'd by the tag.
+  findMaterial                 Gets the material id'd by the tag.
+  findView                     Gets the view id'd by the tag.
+  firstLight                   Gets the light id'd by the tag.
+  firstObject                  Creates a Hyperbolic Paraboloid primitive.
+  firstView                    Gets the view id'd by the tag.
+  fz_objt_add_objt_to_project  Adds an object to the project window.
+  getActiveLayer               Gets the active layer.
+  getActiveMaterial            Gets the active material.
+  getActiveProject             Gets the active project.
+  getActiveView                Gets the active view.
+  getAngAccuracy               getAngAccuracy
+  getAngDirection              getAngDirection
+  getAngMeasurmentMethod       getAngMeasurmentMethod
+  getAngOrientation            getAngOrientation
+  getAngPlaces                 getAngPlaces
+  getAngTrailing               getAngTrailing
+  getAngType                   getAngType
+  getDecimalPlaces             getDecimalPlaces
+  getDecimalTrailing           getDecimalTrailing
+  getDisplayType               getDisplayType
+  getEnglishBase               getEnglishBase
+  getFirstLayer                Gets the layer id'd by the tag.
+  getFirstMaterial             Gets the material id'd by the tag.
+  getLastLayer                 Gets the layer id'd by the tag.
+  getLastMaterial              Gets the material id'd by the tag.
+  getLayer                     Gets the layer id'd by the tag.
+  getLayerCount                Gets the number of layers in th eproject.
+  getLayersRoot                Gets the layer id'd by the tag.
+  getMaterial                  Gets the material id'd by the tag.
+  getMaterialCount             Gets the number of materials in th eproject.
+  getMaterialList              Sorts the materials.
+  getMetricBase                getMetricBase
+  getProject                   Gets the project id'd by the tag.
+  getProjectList               Gets the project id'd by the tag.
+  getType                      getType
+  getUnitsAccuracy             getUnitsAccuracy
+  group_ptr                    Layer
+  helixAoundAxis               Creates an Helix object around axis.
+  helixAoundWire               Creates an Helix object around wire path object.
+  helixAroundAxis              Creates an Helix object around axis.
+  helixAroundWire              Creates an Helix object around wire path object.
+  helixFromSource              Creates an Helix object from a source object.
+  hyperbolicParaboloid         Creates a Hyperbolic Paraboloid primitive.
+  interpolatePoint             Caculate the midpoint of a line.
+  intersection                 Intersection a set of objects
+  invertMatrix                 Makes the matrix Identity
+  isIdentityMatrix             Given a matrix, returns 1 if its an Identity matrix, else 0.
+  lastLight                    Gets the light id'd by the tag.
+  lastObject                   Creates a Hyperbolic Paraboloid primitive.
+  lastView                     Gets the view id'd by the tag.
+  layer_ptr                    Layer
+  light                        Gets the light id'd by the tag.
+  lightCount                   Gets the number of lights in th eproject.
+  lightList                    Sorts the lights.
+  light_ptr                    light
+  line                         Creates a straight line object.
+  loadProject                  Gets the project id'd by the tag.
+  loop_ptr                     formZ Object loop
+  makeIdentityMatrix           Makes the matrix Identity
+  mat                          mat
+  mat3x3                       mat3x3
+  material_ptr                 material
+  midPoint                     Caculate the midpoint of a line.
+  morf                         Creates a Hyperbolic Paraboloid primitive.
+  multiSpline                  Creates a multi Spline.
+  multiSplineThroughPts        Creates a spline through points.
+  multiplyMatrix               Given a matrix, returns 1 if its an Identity matrix, else 0.
+  newProject                   Creates a new Project
+  ngon                         Creates an ngon.
+  objectList                   Creates a Hyperbolic Paraboloid primitive.
+  objectTypeIdList             Sets the object layer
+  objectTypeList               Sets the object layer
+  objt_ptr                     formZ Model Object
+  parallelDouble               Creates a double parallel offset object.
+  parallelSingle               Creates a single parallel offset object.
+  parallelWire                 Creates a single offset (parallel) wire object on the same plane.
+  pathstair                    Constructs a stair object from a path.
+  pick                         Creates a Hyperbolic Paraboloid primitive.
+  pickAdd                      Creates a Hyperbolic Paraboloid primitive.
+  pickClear                    Creates a Hyperbolic Paraboloid primitive.
+  pickCount                    Creates a Hyperbolic Paraboloid primitive.
+  pickList                     Creates a Hyperbolic Paraboloid primitive.
+  pickRemove                   Creates a Hyperbolic Paraboloid primitive.
+  point                        Creates a point.
+  pointBetweenPoints           Given a line from p1-p2 is pt one the line between the points.
+  pointCloud                   Creates a point cloud.
+  polygon                      Creates a polygon.
+  project_ptr                  Layer
+  purgeLayers                  removed unused layers.
+  random                       Caculates the distance between two points.
+  rectangle                    Creates an object with a single rectangular face.
+  render                       Gets the project name
+  revolve                      Creates a revolved obect object from a source object.
+  setActiveLayer               Sets the active layer.
+  setActiveMaterial            Sets the active material.
+  setActiveProject             Sets the active project.
+  setActiveView                Sets the active view.
+  setAngAccuracy               setAngAccuracy
+  setAngDirection              setAngDirection
+  setAngMeasurmentMethod       setAngMeasurmentMethod
+  setAngOrientation            setAngOrientation
+  setAngPlaces                 setAngPlaces
+  setAngTrailing               setAngTrailing
+  setAngType                   setAngType
+  setDecimalPlaces             setDecimalPlaces
+  setDecimalTrailing           setDecimalTrailing
+  setDisplayType               setDisplayType
+  setEnglishBase               setEnglishBase
+  setMetricBase                setMetricBase
+  setRenderer                  Gets the project name
+  setType                      setType
+  setUnitsAccuracy             setUnitsAccuracy
+  singleHyperboloid            Creates a Single hyperboloid primitive.
+  softenSubdObject             softens a subd object
+  solveMatrix                  Solves the matrix
+  sortLayers                   Sorts the layers.
+  sortLights                   Sorts the lights.
+  sortMaterials                Sorts the materials.
+  sortViews                    Sorts the views.
+  sphere                       Creates a sphere primitive.
+  spheroid                     Creates a spheroid.
+  spline                       Creates a spline.
+  splineThroughPoints          Creates a spline.
+  swapViewOrder                Swaps tow views in the list. Can use NULL of top or bottom.
+  sweep2path                   Creates a swept obect object from 1 source objects and a path object.
+  sweep2source                 Creates a swept obect object from 2 source objects and a path object.
+  sweepAxial                   Creates a swept obect object from 1 source object and a path object.
+  sweepBoundary                Creates a boundary sweep object.
+  tag                          tag
+  torus                        Creates a torus primitive.
+  triangle                     Creates a triangle.
+  uiPanel                      uiPanel
+  uiSelectFolder               XXX
+  unfold                       Constructs an unfolded object from a source.
+  union                        Boolean Union a list of objects
+  units_ptr                    Units
+  vertex_ptr                   formZ Object vertex
+  view                         Gets the view id'd by the tag.
+  viewCount                    Gets the number of views in th eproject.
+  viewList                     Sorts the views.
+  view_ptr                     view
+  wall2d                       Creates an 2d wall obect object from a source object.
+  wall3d                       Creates an 3d wall obect object from a source object.
+  xy                           xy
+  xyz                          xyz
+  xyzw                         xyzw
+
+=== xyz  (xyz)
+  x                            Convert a string or number to a floating-point number, if possible.
+  y                            Convert a string or number to a floating-point number, if possible.
+  z                            Convert a string or number to a floating-point number, if possible.
+
+=== object  (object)
+  area                         Sets the object layer
+  boundingBox                  Sets the object layer
+  centerOfGravity              Sets the object layer
+  circumference                Sets the object layer
+  copy                         Sets the object layer
+  edge                         Gets the object name
+  edgeCount                    Gets the object name
+  edgeList                     Gets the object name
+  extents                      Sets the object layer
+  face                         Gets the object name
+  faceAddByVertex              Gets the object name
+  faceCount                    Gets the object name
+  faceList                     Gets the object name
+  getLayer                     Gets the object layer
+  getLocalAxes                 Sets the object layer
+  getLocalOrigin               Sets the object layer
+  getLock                      Gets the layer name
+  getMaterial                  Gets the layer name
+  getName                      Gets the object name
+  getPicked                    Gets the object name
+  getRenderEdges               Gets the layer name
+  getRenderSilhouette          Gets the layer name
+  getRenderSurface             Gets the layer name
+  getShadowCast                Gets the layer name
+  getShadowRecieve             Gets the layer name
+  getSnap                      Gets the layer name
+  getVisible                   Gets the object visibility (0 off, 1 visible, 2 ghosted)
+  loop                         Gets the object name
+  loopCount                    Gets the object name
+  loopList                     Gets the object name
+  modelType                    Sets the object layer
+  momentsOfInertia             Sets the object layer
+  move                         Sets the object layer
+  moveLocal                    Sets the object layer
+  moveTo                       Sets the object layer
+  next                         Gets the object name
+  objectType                   Sets the object layer
+  objectTypeId                 Sets the object layer
+  previous                     Gets the object name
+  principleAxes                Sets the object layer
+  reverseTopology              Gets the object name
+  rotate                       Gets the layer name
+  rotateLocal                  Gets the layer name
+  scale                        Sets the layer name
+  scaleLocal                   Sets the layer name
+  setLayer                     Sets the object layer
+  setLocalAxes                 Sets the object layer
+  setLocalOrigin               Sets the object layer
+  setLock                      Sets the layer name
+  setMaterial                  Sets the layer name
+  setName                      Sets the object name
+  setPicked                    Sets the object name
+  setRenderEdges               Sets the layer name
+  setRenderSilhouette          Sets the layer name
+  setRenderSurface             Sets the layer name
+  setShadowCast                Sets the layer name
+  setShadowRecieve             Sets the layer name
+  setSnap                      Sets the layer name
+  setVisible                   Sets the object visibility (0 off, 1 visible, 2 ghosted)
+  topoType                     Sets the object layer
+  transform                    Sets the layer name
+  transformLocal               Sets the layer name
+  vertex                       Gets the object name
+  vertexAdd                    Gets the object name
+  vertexCount                  Gets the object name
+  vertexList                   Gets the object name
+  volume                       Sets the object layer
+
+=== face  (face)
+  area                         Gets the object name
+  centerOfGravity              Gets the object name
+  circumference                Gets the object name
+  getPicked                    Gets the object name
+  loop                         Gets the object name
+  material                     Gets face material
+  next                         Gets the object name
+  normal                       Gets face normal
+  object                       Gets the object name
+  previous                     Gets the object name
+  setPicked                    Sets the object name
+  type                         Gets the object name
+
+face.loop() -> <loop object at 0x1295c5bb0>
+
+=== loop  (loop)
+  circumference                Gets the object name
+  closed                       Gets the object name
+  edge                         Gets the object name
+  face                         Gets the object name
+  getPicked                    Gets the object name
+  next                         Gets the object name
+  object                       Gets the object name
+  previous                     Gets the object name
+  setPicked                    Sets the object name
+
+face.normal() -> <xyz object at 0x129769da0>
+
+face.centerOfGravity() -> <xyz object at 0x129769e90>
+
+face.area() -> 100.0
+
+obj.vertexList() -> [<vertex object at 0x1295c5bb0>, <vertex object at 0x129725c50>, <vertex object at 0x129725b30>, <vertex object at 0x1297258b0>, <vertex object at 0x129725cd0>, <vertex object at 0x129725c90>, <vertex object at 0x129725ad0>, <vertex object at 0x129725a10>]
+
+=== vertex  (vertex)
+  edgeList                     Gets the object name
+  getPicked                    Gets the object name
+  object                       Gets the object name
+  setPicked                    Sets the object name
+  xyz                          Gets the object name
+
+obj.faceList() -> [<face object at 0x129725b90>, <face object at 0x129725fb0>, <face object at 0x129725a90>, <face object at 0x129725970>, <face object at 0x129725f90>, <face object at 0x129725e10>]
+
+obj.extents() -> [<xyz object at 0x129769da0>, <xyz object at 0x129769c80>]
+
+obj.boundingBox() -> [<xyz object at 0x129769e90>, <xyz object at 0x129769cb0>, <xyz object at 0x129769ce0>, <xyz object at 0x129769d10>, <xyz object at 0x1297683c0>, <xyz object at 0x129769260>, <xyz object at 0x129769290>, <xyz object at 0x1297692c0>]

@@ -1,0 +1,17 @@
+# Machine and agent state
+.DS_Store
+._*
+.remember/
+
+# Generated output (including SDK sample build directories)
+build/
+__pycache__/
+*.py[cod]
+*.log
+projects/scatter/scatter_log.txt
+projects/python-api-dump/fz_api_dump.txt
+
+# Vendor dependencies and downloaded reference collections remain local.
+sdk/FZ_SDK_923/
+references/extensions/
+references/LABPrimitives_8_0_0_3/
