@@ -1,0 +1,38 @@
+/*********************************************************************************************
+ *                                                                                           *
+ *                                                                                           *
+ *   Copyright 1989-2018 by AutoDesSys, Inc.                                                 *
+ *                                                                                           *
+ *   This software and its associated documentation contains proprietary,                    *
+ *   confidential, and trade secret information of AutoDesSys Inc. and may not be            *
+ *   disclosed, copied in any form, or used for any purpose except as specifically           *
+ *   permitted in writing by AutoDesSys, Inc.                                                *
+ *                                                                                           *
+ *   AutoDesSys, Inc. grants permission to use the software to those who purchase            *
+ *   a license.  Such a usage will be made according to the terms and conditions             *
+ *   specified in the license agreement to which a licensee agrees before installing         *
+ *   and commencing usage of the software.  The license agreement can be found               *
+ *   on the envelop that contains the software CD.                                           *
+ *                                                                                           *
+ *   AutoDesSys, Inc. also grants permission to licensees to develop extensions to           *
+ *   the software, which can be in the form of scripts or plugins.  The permission           *
+ *   includes calling the API and call back functions provided by AutoDesSys, Inc.           *
+ *   and accessing information relevant to these functions and the general workings          *
+ *   of form.Z, but only up to the point to which AutoDesSys, Inc. has chosen to             *
+ *   expose, through its form.Z SDK Manual.  All extensions developed by third               *
+ *   parties will include a copy of this copyright note in an easily accessible place or     *
+ *   a clear instruction to read this original note by AutoDesSys, Inc.                      *
+ *                                                                                           *
+ *   All the software distributed under a license, either for the purpose of using it or     *
+ *   for the purpose of developing extensions, is distributed AS IS, WITHOUT                 *
+ *   WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, AND                                    *
+ *   AutoDesSys, Inc. HEREBY DISCLAIMS ALL SUCH WARRANTIES,                                  *
+ *   INCLUDING WITHOUT LIMITATION, ANY WARRANTIES OF                                         *
+ *   MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.                                    *
+ *                                                                                           *
+ *   formZ, RenderZone, and RadioZity are registered trademarks of AutoDesSys, Inc.          *
+ *                                                                                           *
+ *   form.Z SDK, Version 8.6.3, Dec 03, 2018                                                 *
+ *                                                                                           *
+ *                                                                                           *
+ *********************************************************************************************/
