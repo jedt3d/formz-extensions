@@ -1,6 +1,6 @@
 /* Array extension; registration follows the SDK Triangle tool contract.
    COPYRIGHT (C) 2001. All Rights Reserved. auto*des*sys, Inc., Columbus, Ohio, USA.
-   New implementation: see repository LICENSE and ../AUTODESSYS_NOTICE.txt. */
+   New implementation: see repository LICENSE and ../../AUTODESSYS_NOTICE.txt. */
 #include "array.h"
 #include "fz_plugin_glue_api.h"
 #include "fz_cmnd_model_ids.h"
