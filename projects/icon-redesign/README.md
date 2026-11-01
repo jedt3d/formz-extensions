@@ -137,6 +137,12 @@ python3 projects/icon-redesign/tools/contact_sheet.py "/Applications/formZ 10/fo
 | --- | --- | --- | --- |
 | pilot | mixed | 10 | approved; all but Pick retraced over formZ's originals |
 | 1 | Shapes (8), Draw (12, incl. Arc 3174) | 16 new | approved on the contact sheet (01 Nov 2026) |
+| 2 | Derive (7 of 9), Derive 2 (12 of 13) | 19 new | approved on the contact sheet (01 Nov 2026) |
+
+Not in `Icons/`, so outside these batches: **Frame** is a plugin
+(`Plugins/Tools/Frame.bmp`, loaded by `frame.fzp`) and **Unfold** is a
+Python script tool (`Scripts/unfold.py`). Their icons load through other
+paths; test those separately before redrawing them.
 
 Generators (masters are rewritten from these; edit the generator, not the SVG):
 - `tools/gen_batch1.py`: point-based 2D icons (shapes, lines, splines, arcs)
