@@ -61,6 +61,12 @@ only; the references guide principles, never shapes.
   current icon's subject, composition and viewpoint (for example the tilted
   paint can, the vase-shaped revolve, the sphere-on-block fillet). Never take
   a subject from SketchUp, Fusion or other references.
+- **Trace, don't redesign (01 Nov 2026):** each icon is traced over formZ's
+  original at 48 units: same silhouette, faces, point positions and digit
+  positions, rendered as 2D navy outlines with flat colour fills. The
+  contact sheet's overlay tile (new at 50% over old) should show the two
+  matching. Only the Pick arrow (3169) is a deliberate redesign, and it is
+  approved as is.
 - **Isometric rendering** for every object, including the Pick arrow, which
   keeps formZ's 3D extruded look.
 - **formZ's colour conventions stay:** yellow `#F2C200` for start points,
@@ -117,6 +123,31 @@ Round 3: Pick arrow rebuilt as a symmetric arrow, rotated 32° and extruded
 (`tools/pick_arrow.py` generates its master); the paint can pours a red
 stream into a drop. **Approved by the user in formZ (01 Nov 2026).** Phase 2
 done; next is Phase 3, starting with the rest of the 48 px tool palette.
+
+## Phase 3 progress
+
+Built icons and their formZ labels are listed in `manifest.csv` (id, name,
+group, batch). Review with the contact sheet:
+
+```sh
+python3 projects/icon-redesign/tools/contact_sheet.py "/Applications/formZ 10/formZ 10.0 pro/formZ.app/Contents/Resources/Icons" build/icon-redesign/Icons projects/icon-redesign/manifest.csv build/icon-redesign/contact-sheet.html
+```
+
+| Batch | Group | Icons | Status |
+| --- | --- | --- | --- |
+| pilot | mixed | 10 | approved; all but Pick retraced over formZ's originals |
+| 1 | Shapes (8), Draw (12, incl. Arc 3174) | 16 new | approved on the contact sheet (01 Nov 2026) |
+
+Generators (masters are rewritten from these; edit the generator, not the SVG):
+- `tools/gen_batch1.py`: point-based 2D icons (shapes, lines, splines, arcs)
+  from measured formZ geometry; digits in Helvetica Bold 12.5, each checked
+  and nudged clear of lines and dots.
+- `tools/gen_traced3d.py`: Cube, Extrusion, Revolve, Fillet, Paint, traced as
+  polygons and ellipses over the originals.
+- `tools/pick_arrow.py`: the approved Pick arrow (3169).
+
+The contact sheet's overlay tile shows each new icon at 50% over formZ's
+original; it is the acceptance check for every batch.
 
 ## Repository rules
 
