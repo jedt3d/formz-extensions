@@ -84,6 +84,10 @@ The Python API probe's [historical snapshot](projects/python-api-dump/reference/
 
 ## Development workflow
 
+Design research: [Cinema 4D and Blender array workflows, with form·Z extension opportunities](docs/research/array-tools.md).
+
+Array development: [Feature proposal](docs/proposals/array-tools.md) and [incremental development plan](docs/plans/array-tools-incremental.md). Each development gate adds one behavior and becomes the next baseline only after its focused test passes.
+
 This organization establishes the baseline on `main`. Subsequent development uses one `feature/<plan-name>` branch per development plan. For example, with a clean working tree:
 
 ```sh
