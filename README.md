@@ -11,6 +11,7 @@ Repository: [jedt3d/formz-extensions](https://github.com/jedt3d/formz-extensions
 | [Smiley](projects/smiley/README.md) | Draw a planar face with eye and mouth holes using two clicks | `projects/smiley/build.sh` | Universal macOS bundle build and signing verification; manual host check required |
 | [Triangle](projects/triangle/README.md) | Rebuild the original SDK tool as a native smoke test | `projects/triangle/build.sh` | Universal macOS bundle build; manual host check required |
 | [Scatter](projects/scatter/README.md) | Scatter copies of picked source objects across target faces with size variation | `projects/scatter/scatter.py`, `fzMain()` | Standalone geometry self-check; manual host palette check required |
+| [Icon redesign](projects/icon-redesign/README.md) | Plan and loader findings for sharp 2× (Retina) formZ interface icons | `projects/icon-redesign/tools/make_icon_test_copy.py` | Host test passed for 48 px icons (light and dark); further checks pending |
 | [Python API dump](projects/python-api-dump/README.md) | Inspect the actual `formzPythonInterface` API | `projects/python-api-dump/fz_api_dump.py`, `fzMain()` | Syntax check; API probing requires form·Z |
 
 ## Layout
