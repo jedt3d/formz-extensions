@@ -1,0 +1,729 @@
+{
+  "status": "published-and-verified",
+  "tracker": "github",
+  "repository": "jedt3d/formz-extensions",
+  "parent_spec_url": "https://github.com/jedt3d/formz-extensions/issues/2",
+  "label": "ready-for-agent",
+  "tickets": [
+    {
+      "id": "01",
+      "title": "Create the first usable LINE array",
+      "body_file": "01-first-usable-line.md",
+      "blocked_by": [],
+      "gates": [
+        "G001",
+        "G002",
+        "G003",
+        "G004",
+        "G005",
+        "G006",
+        "G007",
+        "G008",
+        "G009",
+        "G010",
+        "G011",
+        "G012"
+      ],
+      "delivers": "A modeler can activate Array with pre-picked sources or select them afterward, enter a simple count/pitch LINE, create ordinary copies, and undo/redo or cancel the operation. The tool and native scene operation work together; this is not a shell-only or math-only ticket.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/3",
+      "issue_number": 3,
+      "published_title": "[Array 01] Create the first usable LINE array",
+      "status": "published",
+      "native_blocked_by_issue_numbers": []
+    },
+    {
+      "id": "02",
+      "title": "Validate LINE count and spacing inputs",
+      "body_file": "02-line-input-validation.md",
+      "blocked_by": [
+        "01"
+      ],
+      "gates": [
+        "G013",
+        "G014",
+        "G015",
+        "G016"
+      ],
+      "delivers": "A modeler receives a specific validation result for zero/single counts, invalid intervals, and requests beyond the configured output limit before geometry is allocated.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/4",
+      "issue_number": 4,
+      "published_title": "[Array 02] Validate LINE count and spacing inputs",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        3
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Place LINE arrays by extent or fitted count",
+      "body_file": "03-line-extent-and-fit.md",
+      "blocked_by": [
+        "02"
+      ],
+      "gates": [
+        "G017",
+        "G018"
+      ],
+      "delivers": "A modeler can choose fixed intervals within an extent or fit a generated count to an overall LINE length, with the expected endpoint/remainder behavior.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/5",
+      "issue_number": 5,
+      "published_title": "[Array 03] Place LINE arrays by extent or fitted count",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        4
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Define LINE graphically with anchors and assemblies",
+      "body_file": "04-line-graphic-anchor-assembly.md",
+      "blocked_by": [
+        "03"
+      ],
+      "gates": [
+        "G019",
+        "G020",
+        "G021",
+        "G022",
+        "G023",
+        "G024"
+      ],
+      "delivers": "A modeler can define a LINE graphically in its own frame, choose a source anchor, replace sources, repeat a multi-object assembly, and request the declared simple clear-gap behavior through the same working tool.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/6",
+      "issue_number": 6,
+      "published_title": "[Array 04] Define LINE graphically with anchors and assemblies",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        5
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Preserve native source geometry in LINE arrays",
+      "body_file": "05-line-native-source-types.md",
+      "blocked_by": [
+        "04"
+      ],
+      "gates": [
+        "G025",
+        "G026",
+        "G027",
+        "G028",
+        "G029",
+        "G030"
+      ],
+      "delivers": "A modeler can choose smooth-solid, straight/curved NURBS, NURBS-surface, NURBS-faced-solid, and controlled-solid sources in the existing LINE workflow, with each type tested separately and preserved natively.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/7",
+      "issue_number": 7,
+      "published_title": "[Array 05] Preserve native source geometry in LINE arrays",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        6
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Validate controlled-object LINE transforms",
+      "body_file": "06-line-controlled-transforms.md",
+      "blocked_by": [
+        "05"
+      ],
+      "gates": [
+        "G031",
+        "G032",
+        "G033",
+        "G034"
+      ],
+      "delivers": "A modeler can rotate and scale supported controlled sources while retaining their parameters, and receives a specific rejection for verified unsupported nonuniform transformations before controls are lost.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/8",
+      "issue_number": 8,
+      "published_title": "[Array 06] Validate controlled-object LINE transforms",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        7
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Choose independent or verified linked LINE output",
+      "body_file": "07-line-copy-or-linked.md",
+      "blocked_by": [
+        "06"
+      ],
+      "gates": [
+        "G035",
+        "G036"
+      ],
+      "delivers": "A modeler can select independent copies or the verified native linked mechanism; source geometry edits propagate only for the chosen linked behavior.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/9",
+      "issue_number": 9,
+      "published_title": "[Array 07] Choose independent or verified linked LINE output",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        8
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Add seeded LINE position variation",
+      "body_file": "08-line-seed-and-position.md",
+      "blocked_by": [
+        "07"
+      ],
+      "gates": [
+        "G037",
+        "G038",
+        "G039",
+        "G040"
+      ],
+      "delivers": "A modeler can set a seed and position variation in units or a defined percentage through LINE Tool Options and obtain repeatable native scene placements.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/10",
+      "issue_number": 10,
+      "published_title": "[Array 08] Add seeded LINE position variation",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        9
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Add LINE size variation",
+      "body_file": "09-line-size-variation.md",
+      "blocked_by": [
+        "08"
+      ],
+      "gates": [
+        "G041",
+        "G042",
+        "G043"
+      ],
+      "delivers": "A modeler can vary LINE repetition size uniformly or independently by axis on supported sources using explicit percentage or numeric ranges.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/11",
+      "issue_number": 11,
+      "published_title": "[Array 09] Add LINE size variation",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        10
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Add LINE rotation variation",
+      "body_file": "10-line-rotation-variation.md",
+      "blocked_by": [
+        "09"
+      ],
+      "gates": [
+        "G044",
+        "G045"
+      ],
+      "delivers": "A modeler can vary LINE repetition rotation using degrees or a percentage of an explicit reference angle, and observe the intended native orientation changes.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/12",
+      "issue_number": 12,
+      "published_title": "[Array 10] Add LINE rotation variation",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        11
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Add LINE interval and clear-gap variation",
+      "body_file": "11-line-interval-gap-variation.md",
+      "blocked_by": [
+        "10"
+      ],
+      "gates": [
+        "G046",
+        "G047",
+        "G048"
+      ],
+      "delivers": "A modeler can randomize nominal LINE intervals or the supported clear-gap rule separately from position jitter, with explicit numeric or percentage bounds.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/13",
+      "issue_number": 13,
+      "published_title": "[Array 11] Add LINE interval and clear-gap variation",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        12
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Make LINE variation stable under edits",
+      "body_file": "12-line-random-edit-stability.md",
+      "blocked_by": [
+        "11"
+      ],
+      "gates": [
+        "G049",
+        "G050",
+        "G051",
+        "G052"
+      ],
+      "delivers": "A modeler can disable variation to recover the deterministic layout, preserve intervals within an extent, change one channel independently, and increase LINE count without rerolling existing placements.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/14",
+      "issue_number": 14,
+      "published_title": "[Array 12] Make LINE variation stable under edits",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        13
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Compose LINE variation in an explicit frame",
+      "body_file": "13-line-transform-composition.md",
+      "blocked_by": [
+        "12"
+      ],
+      "gates": [
+        "G053",
+        "G054",
+        "G055",
+        "G056"
+      ],
+      "delivers": "A modeler can use a declared randomization frame and combine supported size/rotation/position variation predictably; clear gaps follow varied sizes under the supported rule and invalid scale ranges are rejected.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/15",
+      "issue_number": 15,
+      "published_title": "[Array 13] Compose LINE variation in an explicit frame",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        14
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Preserve native geometry under LINE variation",
+      "body_file": "14-line-random-native-preservation.md",
+      "blocked_by": [
+        "13"
+      ],
+      "gates": [
+        "G057",
+        "G058",
+        "G059",
+        "G060"
+      ],
+      "delivers": "A modeler can apply the supported random transforms to controlled, smooth-solid, NURBS-curve, and NURBS-surface LINE sources, with separate runtime evidence that representations and supported controls survive.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/16",
+      "issue_number": 16,
+      "published_title": "[Array 14] Preserve native geometry under LINE variation",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        15
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Complete LINE preview and operation history",
+      "body_file": "15-line-preview-apply-history.md",
+      "blocked_by": [
+        "14"
+      ],
+      "gates": [
+        "G061",
+        "G062",
+        "G063",
+        "G064",
+        "G065"
+      ],
+      "delivers": "A modeler can revise a LINE preview without accumulating output, handle a deleted source, cancel temporary geometry, and Apply the complete array as one undoable/redoable operation.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/17",
+      "issue_number": 17,
+      "published_title": "[Array 15] Complete LINE preview and operation history",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        16
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Accept the durable LINE_READY baseline",
+      "body_file": "16-line-ready-persistence.md",
+      "blocked_by": [
+        "15"
+      ],
+      "gates": [
+        "G066",
+        "G067",
+        "G068"
+      ],
+      "delivers": "A modeler can save and reopen committed LINE output with its native geometry and existing material assignments. The accumulated LINE workflow passes before another layout is developed.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/18",
+      "issue_number": 18,
+      "published_title": "[Array 16] Accept the durable LINE_READY baseline",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        17
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Add Rectangle using the shared LINE workflow",
+      "body_file": "17-rectangle-layout.md",
+      "blocked_by": [
+        "16"
+      ],
+      "gates": [
+        "G069",
+        "G070",
+        "G071",
+        "G072"
+      ],
+      "delivers": "A modeler can create a two-axis Rectangle grid, enter its extents, and switch between LINE and Rectangle while retaining applicable shared settings and each layout's own values.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/19",
+      "issue_number": 19,
+      "published_title": "[Array 17] Add Rectangle using the shared LINE workflow",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        18
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Extend Rectangle to a 3D Grid",
+      "body_file": "18-three-dimensional-grid.md",
+      "blocked_by": [
+        "17"
+      ],
+      "gates": [
+        "G073",
+        "G074"
+      ],
+      "delivers": "A modeler can add a third grid axis with independent pitch or extent while reusing accepted source selection, output, variation, and lifecycle behavior.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/20",
+      "issue_number": 20,
+      "published_title": "[Array 18] Extend Rectangle to a 3D Grid",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        19
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Add Radial placement and angular variation",
+      "body_file": "19-radial-layout.md",
+      "blocked_by": [
+        "18"
+      ],
+      "gates": [
+        "G075",
+        "G076",
+        "G077",
+        "G078",
+        "G079",
+        "G080"
+      ],
+      "delivers": "A modeler can create full-circle or arc arrays with numeric/graphic input, angular spacing, radial orientation, and seeded angular interval variation through the shared tool.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/21",
+      "issue_number": 21,
+      "published_title": "[Array 19] Add Radial placement and angular variation",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        20
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Assign Path Sources and Targets explicitly",
+      "body_file": "20-path-role-picking.md",
+      "blocked_by": [
+        "19"
+      ],
+      "gates": [
+        "G081",
+        "G082",
+        "G083",
+        "G084",
+        "G085"
+      ],
+      "delivers": "A modeler can retain Sources while assigning a compatible guide, resolve ambiguous mixed preselection, reject invalid targets with a reason, and replace a source without losing target identities. This is verifiable selection behavior in the active tool.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/22",
+      "issue_number": 22,
+      "published_title": "[Array 20] Assign Path Sources and Targets explicitly",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        21
+      ]
+    },
+    {
+      "id": "21",
+      "title": "Place on straight and polyline path fixtures",
+      "body_file": "21-straight-and-polyline-paths.md",
+      "blocked_by": [
+        "20"
+      ],
+      "gates": [
+        "G086",
+        "G087",
+        "G088"
+      ],
+      "delivers": "A modeler can select a straight line/edge, polygonal polyline, or geometrically straight NURBS guide and generate native placements at verified physical-distance stations for each distinct guide type.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/23",
+      "issue_number": 23,
+      "published_title": "[Array 21] Place on straight and polyline path fixtures",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        22
+      ]
+    },
+    {
+      "id": "22",
+      "title": "Place along a curved NURBS path",
+      "body_file": "22-curved-nurbs-path.md",
+      "blocked_by": [
+        "21"
+      ],
+      "gates": [
+        "G089"
+      ],
+      "delivers": "A modeler can choose a curved NURBS guide and obtain physical-distance placement verified independently of curve parameter spacing.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/24",
+      "issue_number": 24,
+      "published_title": "[Array 22] Place along a curved NURBS path",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        23
+      ]
+    },
+    {
+      "id": "23",
+      "title": "Place along an arc guide",
+      "body_file": "23-arc-path.md",
+      "blocked_by": [
+        "22"
+      ],
+      "gates": [
+        "G090"
+      ],
+      "delivers": "A modeler can choose a native arc guide and obtain placements matching a known analytic arc fixture.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/25",
+      "issue_number": 25,
+      "published_title": "[Array 23] Place along an arc guide",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        24
+      ]
+    },
+    {
+      "id": "24",
+      "title": "Place along a native curve or spline guide",
+      "body_file": "24-native-spline-path.md",
+      "blocked_by": [
+        "23"
+      ],
+      "gates": [
+        "G091"
+      ],
+      "delivers": "A modeler can choose a recorded native curve/spline object and obtain native scene placement verified against its physical length; unsupported object types are not silently facetted.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/26",
+      "issue_number": 26,
+      "published_title": "[Array 24] Place along a native curve or spline guide",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        25
+      ]
+    },
+    {
+      "id": "25",
+      "title": "Control path intervals margins and closure",
+      "body_file": "25-path-spacing-margins-closure.md",
+      "blocked_by": [
+        "24"
+      ],
+      "gates": [
+        "G092",
+        "G093",
+        "G094",
+        "G095"
+      ],
+      "delivers": "A modeler can use physical path intervals, start/end margins, and a closed-path distribution without a duplicate seam placement.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/27",
+      "issue_number": 27,
+      "published_title": "[Array 25] Control path intervals margins and closure",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        26
+      ]
+    },
+    {
+      "id": "26",
+      "title": "Orient repetitions along supported paths",
+      "body_file": "26-path-orientation.md",
+      "blocked_by": [
+        "25"
+      ],
+      "gates": [
+        "G096",
+        "G097",
+        "G098",
+        "G099"
+      ],
+      "delivers": "A modeler can choose tangent alignment, roll, and supported upright/nonplanar frame behavior, with independently checked orientation fixtures.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/28",
+      "issue_number": 28,
+      "published_title": "[Array 26] Orient repetitions along supported paths",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        27
+      ]
+    },
+    {
+      "id": "27",
+      "title": "Revalidate active Path targets and preview",
+      "body_file": "27-path-target-lifecycle.md",
+      "blocked_by": [
+        "26"
+      ],
+      "gates": [
+        "G100",
+        "G101"
+      ],
+      "delivers": "A modeler receives a clear response when switching to an incompatible layout or deleting an active path target; targets are not silently reassigned and stale preview output is invalidated.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/29",
+      "issue_number": 29,
+      "published_title": "[Array 27] Revalidate active Path targets and preview",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        28
+      ]
+    },
+    {
+      "id": "28",
+      "title": "Distribute along polygon perimeters or edges",
+      "body_file": "28-polygon-edge-layout.md",
+      "blocked_by": [
+        "27"
+      ],
+      "gates": [
+        "G102",
+        "G103",
+        "G104",
+        "G105",
+        "G106"
+      ],
+      "delivers": "A modeler can choose whole-perimeter or per-edge placement, selected edges, shared-corner deduplication, and explicit outgoing-edge corner orientation through the shared Array workflow.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/30",
+      "issue_number": 30,
+      "published_title": "[Array 28] Distribute along polygon perimeters or edges",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        29
+      ]
+    },
+    {
+      "id": "29",
+      "title": "Use native NURBS boundary edges as guides",
+      "body_file": "29-nurbs-boundary-guides.md",
+      "blocked_by": [
+        "28"
+      ],
+      "gates": [
+        "G107",
+        "G108"
+      ],
+      "delivers": "A modeler can select straight and curved NURBS surface/object boundary edges as guides, with separate distance/representation evidence rather than display-facet placement.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/31",
+      "issue_number": 31,
+      "published_title": "[Array 29] Use native NURBS boundary edges as guides",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        30
+      ]
+    },
+    {
+      "id": "30",
+      "title": "Use native solid edges as guides",
+      "body_file": "30-solid-boundary-guides.md",
+      "blocked_by": [
+        "29"
+      ],
+      "gates": [
+        "G109",
+        "G110"
+      ],
+      "delivers": "A modeler can select straight and curved solid boundary edges as guides, while preserving native edge evaluation and the source representation.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/32",
+      "issue_number": 32,
+      "published_title": "[Array 30] Use native solid edges as guides",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        31
+      ]
+    },
+    {
+      "id": "31",
+      "title": "Create one repetition per target vertex",
+      "body_file": "31-vertex-layout-and-picking.md",
+      "blocked_by": [
+        "30"
+      ],
+      "gates": [
+        "G111",
+        "G112",
+        "G113",
+        "G114"
+      ],
+      "delivers": "A modeler can pre-pick target vertices before choosing a source or explicitly designate an object's All Vertices scope and obtain one repetition per selected topological vertex.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/33",
+      "issue_number": 33,
+      "published_title": "[Array 31] Create one repetition per target vertex",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        32
+      ]
+    },
+    {
+      "id": "32",
+      "title": "Preserve vertex identity and topology semantics",
+      "body_file": "32-vertex-identity.md",
+      "blocked_by": [
+        "31"
+      ],
+      "gates": [
+        "G115",
+        "G116",
+        "G117"
+      ],
+      "delivers": "A modeler gets one output per unique topological identity: repeated references are deduplicated, distinct coincident vertices remain distinct, and display refinement does not change the count.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/34",
+      "issue_number": 34,
+      "published_title": "[Array 32] Preserve vertex identity and topology semantics",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        33
+      ]
+    },
+    {
+      "id": "33",
+      "title": "Finish seeded Vertex variation and options",
+      "body_file": "33-vertex-variation-and-options.md",
+      "blocked_by": [
+        "32"
+      ],
+      "gates": [
+        "G118",
+        "G119",
+        "G120"
+      ],
+      "delivers": "A modeler can add a vertex target without rerolling existing identities and apply optional position variation while retaining one-per-vertex output; Vertex options omit inapplicable gap/count controls.",
+      "issue_url": "https://github.com/jedt3d/formz-extensions/issues/35",
+      "issue_number": 35,
+      "published_title": "[Array 33] Finish seeded Vertex variation and options",
+      "status": "published",
+      "native_blocked_by_issue_numbers": [
+        34
+      ]
+    }
+  ],
+  "approved": true,
+  "parent_issue_number": 2,
+  "verification": {
+    "date": "2026-11-01",
+    "parent_subissues": 33,
+    "native_blocking_edges": 32,
+    "matching_issue_bodies": 34,
+    "ready_for_agent_issues": 34,
+    "core_gates_covered": 120
+  }
+}
